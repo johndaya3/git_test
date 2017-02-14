@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<project name="Git_test" default="print_mgs1">
+	<target name="print_mgs1" depends="dependency1, dependency2">
+		<echo>HELLO WORLD</echo>
+	</target>
+	<property file="build.property"/>
+	<target name="dependency1">
+		<echo>Dependency1:${ant.version}</echo>
+	</target>
+
+	<target name="dependency2">
+		<echo>Dependency2:${ant.home} Site:${sitename} Deploy:${deploy_id}</echo>
+	</target>
+</project>
+
